@@ -560,17 +560,14 @@ margin-left: 16px;
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   background-color: rgba(46, 47, 66, 0.4);
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -617,10 +614,11 @@ margin-left: 16px;
 .btn-close:hover,
 .btn-close:focus {
   background-color: #404bbf;
+  border: none;
 }
 .btn-close .icon-close:hover,
 .btn-close .icon-close:focus {
-  fill: #fff;
+  fill: #ffffff;
 }
 .modal-logo {
   font-weight: 500;
@@ -669,16 +667,25 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #2e2f42;
 }
 
-.name-input:hover + .form-icon {
+.comment-text:focus + .form-icon {
   fill: #4d5ae5;
 }
-.name-input:hover {
+.comment-text:focus {
   border-color: #4d5ae5;
+}
+.form-comment {
+margin-bottom: 16px;
 }
 .comment-text {
   width: 360px;
   height: 120px;
   padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  resize: none;
+
 }
 .comment-text::placeholder {
   font-size: 12px;
@@ -725,13 +732,13 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: absolute;
 }
 .accept-span {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   position: absolute;
 }
 .accept-checkbox:hover + .name-label span {
-  border-radius: 2px;
+  border: none;
     fill: #f4f4fd;
     background-color: #404bbf;
 }
