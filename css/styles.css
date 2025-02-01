@@ -454,7 +454,6 @@ img {
       .container-footer{
       display: flex;
       align-items: baseline;
-      margin-right: 120px;
     }
     .footer-social-icon {
       display: flex;
@@ -532,6 +531,7 @@ img {
 .footer-btn {
   border-radius: 4px;
     padding-left: 24px;
+    padding-right: 24px;
     min-width: 165px;
     height: 40px;
     color: #FFF;
@@ -545,6 +545,7 @@ img {
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-btn-icon {
 fill: #FFF;
@@ -711,6 +712,7 @@ margin-bottom: 16px;
   justify-content: center;
   flex-direction: row;
   gap: 8px;
+  margin-right: 8px;
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -731,9 +733,10 @@ margin-bottom: 16px;
     color: #4d5ae5;
 }
 .accept-icon {
-  display: flex;
-    margin: 0auto;
-    position: absolute;
+
+}
+.name-label {
+   padding-right: 8px;
 }
 .accept-span {
   display: inline-flex;
@@ -741,7 +744,7 @@ margin-bottom: 16px;
   align-items: center;
   position: absolute;
 }
-.accept-checkbox:hover + .name-label span {
+.accept-checkbox:checked + .name-label span {
   border: none;
     fill: #f4f4fd;
     background-color: #404bbf;
